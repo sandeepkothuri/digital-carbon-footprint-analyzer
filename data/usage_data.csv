@@ -1,0 +1,13 @@
+app,category,device,minutes_per_day,emission_factor_g_per_min,device_energy_multiplier,daily_co2_grams,annual_co2_kg
+YouTube (HD Streaming),Entertainment,Smart TV,95,0.036,1.8,6.156,2.2469
+Netflix (HD Streaming),Entertainment,Smart TV,45,0.036,1.8,2.916,1.0643
+Instagram (Reels/Video),Social Media,Smartphone,60,0.018,0.4,0.432,0.1577
+TikTok,Social Media,Smartphone,70,0.018,0.4,0.504,0.184
+Zoom / Video Calls,Productivity,Laptop,50,0.024,1.0,1.2,0.438
+Spotify / Music Streaming,Entertainment,Smartphone,90,0.003,0.4,0.108,0.0394
+Facebook / Feed Browsing,Social Media,Smartphone,30,0.006,0.4,0.072,0.0263
+Gmail (with attachments),Productivity,Laptop,15,0.05,1.0,0.75,0.2737
+Google Chrome (Browsing),Productivity,Laptop,40,0.004,1.0,0.16,0.0584
+Online Gaming,Entertainment,Gaming Console,55,0.016,2.5,2.2,0.803
+iCloud / Cloud Sync,Productivity,Laptop,25,0.002,1.0,0.05,0.0182
+ChatGPT / AI Tools,Productivity,Laptop,20,0.02,1.0,0.4,0.146
