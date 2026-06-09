@@ -1,47 +1,59 @@
 # 🌍 Digital Carbon Footprint Analyzer
 
-> Quantify, visualize, and reduce the CO₂ emissions from your everyday digital habits.
+> Analyzed digital app usage and quantified CO₂ emissions to support sustainable tech behavior.
 
 ![Dashboard](assets/dashboard.png)
 
 ## Overview
 
-Every app you use has an environmental cost. This tool analyzes **daily digital app usage** and translates it into measurable CO₂ emissions using publicly available environmental metrics from the IEA and Carbon Trust. It generates dashboards and **what-if scenario analyses** to help identify which behavioral changes would have the greatest environmental impact.
+This project analyzes digital app usage patterns and quantifies **CO₂ emissions** using Excel and publicly available environmental metrics (IEA 2023, Carbon Trust). Power BI and Tableau dashboards were built to visualize **per-app carbon footprint** and support **what-if user behavior analysis**. High-emission digital activities were identified and usage reductions were recommended to promote sustainable tech habits.
 
----
+## Project Structure
 
-## Features
+```
+digital-carbon-footprint-analyzer/
+├── analyzer.py              # Main analysis: emissions, scenarios, dashboard
+├── requirements.txt         # Python dependencies
+├── data/
+│   └── usage_data.csv       # 12 apps with usage and emission data
+├── outputs/
+│   └── dashboard.png        # Auto-generated dashboard
+└── README.md
+```
 
-- Per-app CO₂ quantification using IEA 2023 + Carbon Trust emission factors
-- Device energy multipliers (smartphone vs. laptop vs. gaming console)
-- Category breakdown: Entertainment, Work, Social, Productivity
-- What-if scenarios modeling emission reductions from specific behavior changes
-- Dark-themed 4-panel dashboard export
+## Dataset
 
----
+12 digital apps tracked with the following fields:
 
-## Sample Results (Typical Tech-Heavy User)
+| Field | Description |
+|---|---|
+| `app` | App or platform name |
+| `category` | Entertainment / Social Media / Productivity |
+| `device` | Device used (Smartphone, Laptop, Smart TV, etc.) |
+| `minutes_per_day` | Average daily usage time |
+| `emission_factor_g_per_min` | Grams CO₂ per minute (from IEA / Carbon Trust) |
+| `device_energy_multiplier` | Energy consumption relative to laptop baseline |
+| `daily_co2_grams` | Calculated daily CO₂ output |
+| `annual_co2_kg` | Projected annual CO₂ in kilograms |
+
+## Key Results
 
 | Metric | Value |
 |---|---|
-| Daily CO₂ | ~0.80 kg |
-| Annual CO₂ | ~290 kg |
-| Top emitter | Video Streaming (HD) |
-| Best single action | Switch HD → SD saves ~1.7 kg/yr |
-
----
+| Apps tracked | 12 |
+| Top emitter | YouTube HD Streaming |
+| Best behavior change | Switch HD → SD (saves ~2 kg CO₂/yr) |
+| Total annual CO₂ | ~5.46 kg |
 
 ## What-If Scenarios
 
-| Action | Annual Saving |
+| Behavior Change | Annual CO₂ Saved |
 |---|---|
-| Switch HD → SD Streaming | 1.70 kg |
-| Smart TV → Laptop Streaming | 1.26 kg |
-| Console → Laptop Gaming | 0.53 kg |
-| Cut Social Video -30 min/day | 0.08 kg |
-| Halve AI Assistant Usage | 0.07 kg |
-
----
+| Switch YouTube/Netflix HD → SD | 1.99 kg |
+| Use Smartphone instead of Smart TV | 1.75 kg |
+| Replace Gaming Console with Laptop | 0.48 kg |
+| Reduce TikTok/Reels by 30 min/day | 0.24 kg |
+| Cut AI Tool usage by 50% | 0.07 kg |
 
 ## Setup & Run
 
@@ -52,24 +64,18 @@ pip install -r requirements.txt
 python analyzer.py
 ```
 
----
-
 ## Data Sources
 
-- [IEA – Digitisation and Energy (2023)](https://www.iea.org/reports/digitisation-and-energy)
-- [Carbon Trust – Carbon Impact of Video Streaming](https://www.carbontrust.com)
-- [The Shift Project – Lean ICT Report](https://theshiftproject.org)
-
----
+- [IEA — Digitisation and Energy (2023)](https://www.iea.org/reports/digitisation-and-energy)
+- [Carbon Trust — Carbon Impact of Video Streaming](https://www.carbontrust.com)
+- [The Shift Project — Lean ICT Report](https://theshiftproject.org)
 
 ## Tech Stack
 
-`Python` `pandas` `numpy` `matplotlib` `Power BI` `Tableau` `Excel`
-
----
+`Python` `pandas` `matplotlib` `Excel` `Power BI` `Tableau`
 
 ## Author
 
 **Sandeep K** · [LinkedIn](https://www.linkedin.com/in/sandeep-kothuri-9b99142b6/) · [GitHub](https://github.com/sandeepkothuri) · [Portfolio](https://sandeepkothuri.github.io)
 
-*CSULB – M.S. Information Systems | Feb–Mar 2025*
+*CSULB — M.S. Information Systems | Feb 2025 – Mar 2025*
